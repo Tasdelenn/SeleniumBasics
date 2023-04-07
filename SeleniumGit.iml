@@ -19,6 +19,12 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="commons.io" level="project" />
+    <orderEntry type="library" name="apache.commons.lang3" level="project" />
+    <orderEntry type="library" name="testng" level="project" />
+    <orderEntry type="library" name="google.guava" level="project" />
+    <orderEntry type="library" name="selenium-java-4.8" level="project" />
     <orderEntry type="library" name="selenium-java-4.8" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="commons.io" level="project" />
