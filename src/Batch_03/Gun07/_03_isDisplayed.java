@@ -1,7 +1,7 @@
 package Batch_03.Gun07;
 
 import Batch_03.Utils.BaseStaticDriver;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

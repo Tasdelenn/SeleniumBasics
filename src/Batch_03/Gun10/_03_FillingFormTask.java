@@ -11,7 +11,7 @@ Bu siteye gidiniz.  http://demo.seleniumeasy.com/ajax-form-submit-demo.html
 
 
 import Batch_03.Utils.BaseStaticDriver;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

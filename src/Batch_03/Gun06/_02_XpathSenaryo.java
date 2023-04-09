@@ -3,9 +3,9 @@ package Batch_03.Gun06;
 import Batch_03.Utils.BaseStaticDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
-import org.junit.Assert;
 
 public class _02_XpathSenaryo extends BaseStaticDriver {
     public static void main(String[] args) {
