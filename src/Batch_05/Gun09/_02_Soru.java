@@ -128,5 +128,6 @@ public class _02_Soru extends BaseDriver {
         genderMale.click();
         signUpButton.click();
 
+        BekleKapat();
     }
 }
