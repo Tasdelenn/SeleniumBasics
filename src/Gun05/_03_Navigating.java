@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 
 public class _03_Navigating extends BaseDriver {
     public static void main(String[] args) {
-      driver.navigate().to("https://testpages.herokuapp.com/styled/index.html");
+        driver.navigate().to("https://testpages.herokuapp.com/styled/index.html");
 
+        MyFunc.Bekle(3);
         WebElement element=driver.findElement(By.id("alerttest"));
         element.click(); // yeni sayfaya gitti.
         MyFunc.Bekle(3);
