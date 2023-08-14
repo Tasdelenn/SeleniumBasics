@@ -12,8 +12,8 @@ import java.util.List;
 
 public class _02_FindingElements_tag extends BaseDriver {
     public static void main(String[] args) {
-        DriverBaslat();
-
+//        DriverBaslat();
+//
         driver.get("https://www.hepsiburada.com/");
 
         List<WebElement> linkler= driver.findElements(By.tagName("a"));
@@ -21,6 +21,7 @@ public class _02_FindingElements_tag extends BaseDriver {
 
         for(WebElement e: linkler){
             System.out.println("e.getText() = " + e.getText());
+           // break;
         }
 
        BekleVeKapat();
