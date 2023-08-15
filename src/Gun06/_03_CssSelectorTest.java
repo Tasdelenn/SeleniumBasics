@@ -4,9 +4,14 @@ import Utlity.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class _01_CssSelector extends BaseDriver {
+import org.junit.Assert;
+import org.junit.Test;
 
-    public static void main(String[] args) {
+public class _03_CssSelectorTest extends BaseDriver {
+
+    @Test  // sen test sin.main e ihtiyacın yok
+    public void Test1()
+    {
         driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
 
         String mesaj="merhaba selenium";
@@ -18,12 +23,12 @@ public class _01_CssSelector extends BaseDriver {
 
         WebElement msg=driver.findElement(By.cssSelector("[id='display']"));
 
-        if (msg.getText().contains(mesaj))
-            System.out.println("TEST PASSED");
-        else
-            System.out.println("TEST FAILED ....");
+        Assert.assertTrue("Aranılan mesaj bulunamadı", msg.getText().contains(mesaj)); // içindeki TRUE mu değil mi
+        // TRUE is ehiç mesaj verme , değilse hata mesajı ver
 
         BekleVeKapat();
     }
+
+
 
 }
