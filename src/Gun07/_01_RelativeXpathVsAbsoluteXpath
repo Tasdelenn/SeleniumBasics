@@ -32,11 +32,12 @@ space   -> tüm çocuklar        //
 +       -> bitik kardeş        following-sibling::
 ~       -> tüm kardeşler       following::
 
-CSS nth-child
-:nth-child(3)
+CSS nth-child                  XPath
+[id='list']>:nth-child(3)      //ul[@id='list']/li[3]
 
 XPath in CSS den üstünlükleri
-1- Görünen yazısından eleman bulma->      //*[text()='Siparişler']
+1- Görünen yazısından eleman bulma->      //*[text()='Siparişler']   görünen yazısı bu olan
+                                          //*[ contains( text(), 'Sipa' )  ]  görünen yazsısında geçen
 2- Geri Geri gitme ->                     /..         -> parenti bulur
 3- Çoklu elemanlardan seçme               (//*[@id='user-message'])[2]
 
