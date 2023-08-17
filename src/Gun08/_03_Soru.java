@@ -10,5 +10,30 @@ package Gun08;
 //          assert ile doğrulayınız.
 
 
-public class _03_Soru {
+import Utlity.BaseDriver;
+import Utlity.MyFunc;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+
+public class _03_Soru extends BaseDriver {
+
+    @Test
+    public void Test1()
+    {
+        driver.get("https://www.facebook.com/");
+
+        MyFunc.Bekle(2);
+        List<WebElement> cookiesAccept=driver.findElements(By.xpath("//button[text()='Allow all cookies']"));
+        if (cookiesAccept.size() > 0)
+            cookiesAccept.get(0).click();
+
+
+
+
+        BekleVeKapat();
+    }
+
 }
