@@ -8,22 +8,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class _06_ActionDoubleClickTest extends BaseDriver {
+public class _07_ActionRightClickTest extends BaseDriver {
 
     @Test
     public void Test1() {
         driver.get("https://demoqa.com/buttons");
 
-        WebElement btnDblClick = driver.findElement(By.id("doubleClickBtn"));
+        WebElement btnRightClick = driver.findElement(By.id("rightClickBtn"));
         MyFunc.Bekle(2);
 
         Actions aksiyonlar = new Actions(driver);
-        Action aksyion = aksiyonlar.moveToElement(btnDblClick).doubleClick().build();
+        Action aksyion = aksiyonlar.contextClick(btnRightClick).build();
         aksyion.perform();
 
         BekleVeKapat();
-
-        //aksiyonlar.doubleClick(btnDblClick).build().perform();
     }
+
 
 }
