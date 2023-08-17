@@ -15,14 +15,13 @@ public class _01_ElementinStatus extends BaseDriver {
         WebElement sali=driver.findElement(By.id("gwt-debug-cwCheckBox-Tuesday-input"));
 
         MyFunc.Bekle(2);
-        System.out.println("sali.isDisplayed() = " + sali.isDisplayed());
-        System.out.println("sali.isEnabled() = " + sali.isEnabled());
-        System.out.println("sali.isSelected() = " + sali.isSelected());
+        System.out.println("sali.isDisplayed() = " + sali.isDisplayed()); // web de görünüyor mu
+        System.out.println("sali.isEnabled() = " + sali.isEnabled()); // web de etkin mi
+        System.out.println("sali.isSelected() = " + sali.isSelected()); // çekli durumda mı
 
         sali.click();
         MyFunc.Bekle(2);
         System.out.println("sali.isSelected() = " + sali.isSelected());
-
 
         WebElement cumartesi=driver.findElement(By.id("gwt-debug-cwCheckBox-Saturday-input"));
 
