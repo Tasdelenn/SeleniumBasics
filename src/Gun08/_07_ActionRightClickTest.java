@@ -21,6 +21,7 @@ public class _07_ActionRightClickTest extends BaseDriver {
         Action aksyion = aksiyonlar.contextClick(btnRightClick).build();
         aksyion.perform();
 
+        //aksiyonlar.moveToElement(btnRightClick).contextClick().build();
         BekleVeKapat();
     }
 
