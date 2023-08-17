@@ -18,8 +18,8 @@ public class _08_ActionHoverTest extends BaseDriver {
         MyFunc.Bekle(2);
 
         Actions aksiyonlar=new Actions(driver);
-        Action aksiyon= aksiyonlar.moveToElement(element).build();
-        aksiyon.perform();
+        Action aksiyon= aksiyonlar.moveToElement(element).build(); // element in üzerine gel
+        aksiyon.perform(); // etkinleştir.
 
         MyFunc.Bekle(2);
         BekleVeKapat();
