@@ -14,12 +14,12 @@ public class _05_ActionClickTest extends BaseDriver {
     public void Test1() {
         driver.get("https://demoqa.com/buttons");
 
-        WebElement element = driver.findElement(By.xpath("//button[text()='Click Me']"));
+        WebElement btnClick = driver.findElement(By.xpath("//button[text()='Click Me']"));
         //element.click()
 
         Actions aksiyonlar = new Actions(driver);// web sayfası aksiyonlara açıldı.
 
-        Action aksiyon = aksiyonlar.moveToElement(element).click().build();
+        Action aksiyon = aksiyonlar.moveToElement(btnClick).click().build();
         // elementin üzerin click için git orda bekle.aksiyonu hazırla.
         System.out.println("Aksiyon hazırlandı");
 
@@ -28,7 +28,7 @@ public class _05_ActionClickTest extends BaseDriver {
         System.out.println("aksiyon gerçekleşti");
 
         // kısa hali.
-        //new Actions(driver).moveToElement(element).click().build().perform();
+        //aksiyonlar.moveToElement(element).click().build().perform();
 
         BekleVeKapat();
     }
