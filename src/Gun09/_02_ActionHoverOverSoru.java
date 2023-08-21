@@ -36,9 +36,6 @@ public class _02_ActionHoverOverSoru extends BaseDriver {
         MyFunc.Bekle(2);
         aksiyonDriver.moveToElement(kolye).build().perform();
         MyFunc.Bekle(2);
-        aksiyonDriver.moveToElement(bibKolye).build().perform();
-        MyFunc.Bekle(2);
-
         bibKolye.click();
         //aksiyonDriver.moveToElement(bibKolye).click().build().perform();
 
