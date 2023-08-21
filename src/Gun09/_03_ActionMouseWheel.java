@@ -29,9 +29,15 @@ public class _03_ActionMouseWheel extends BaseDriver {
     @Test
     public void Action_mw_ts2(){
         // belli bir miktar kadar scroll
+        driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
+        MyFunc.Bekle(3);
 
+        new Actions(driver).
+                scrollByAmount(0,500).
+                build().
+                perform();
 
-
+        BekleVeKapat();
     }
 
 
