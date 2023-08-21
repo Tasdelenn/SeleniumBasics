@@ -5,6 +5,7 @@ import Utlity.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class _03_ActionMouseWheel extends BaseDriver {
@@ -23,11 +24,12 @@ public class _03_ActionMouseWheel extends BaseDriver {
                 build().
                 perform();
 
-       BekleVeKapat();
+        BekleVeKapat();
     }
 
     @Test
     public void Action_mw_ts2(){
+        //driver = new ChromeDriver();  // çoklu test çalışma için
         // belli bir miktar kadar scroll
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
         MyFunc.Bekle(3);
@@ -37,11 +39,12 @@ public class _03_ActionMouseWheel extends BaseDriver {
                 build().
                 perform();
 
-        BekleVeKapat();
+       BekleVeKapat();
     }
 
     @Test
     public void Action_mw_ts3(){
+        //driver = new ChromeDriver();  // çoklu test çalışma için
         // belli bir elemente kadar adım adım scroll
         driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
         MyFunc.Bekle(3);

@@ -1,6 +1,7 @@
 package Gun09;
 
 import Utlity.BaseDriver;
+import Utlity.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,14 +15,15 @@ public class _04_ActionTusKontrolSendKeys extends BaseDriver {
         driver.get("https://demoqa.com/auto-complete");
 
         WebElement txtBox=driver.findElement(By.id("autoCompleteMultipleContainer"));
+        MyFunc.Bekle(3);
 
         new Actions(driver)
                 .moveToElement(txtBox)  // kutucuğa gel
                 .click()                // içine tıklat
-                .keyDown(Keys.SHIFT)    // shit e bas
-                .sendKeys("a")          // a harfini gönder
-                .keyUp(Keys.SHIFT)      // shit i bırak
-                .sendKeys("hmet")       // hmet kalan ismi gönder
+                .keyDown(Keys.SHIFT)    // shift e bas
+                .sendKeys("a")          // "a" harfini gönder
+                .keyUp(Keys.SHIFT)      // shift i bırak
+                .sendKeys("hmet")       // "hmet" kalan ismi gönder
                 .build()                // aksiyonu hazırla
                 .perform();             // işlemi gerçekleştir.
 
