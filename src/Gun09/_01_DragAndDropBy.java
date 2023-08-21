@@ -23,6 +23,7 @@ public class _01_DragAndDropBy extends BaseDriver {
         Action aksiyon=aksiyonDriver.dragAndDropBy(solSurgu, 100, 0).build();// yatay yönde 100 birim ilerledi
         aksiyon.perform();                                     // 0 : dikey yönde hareket etme imkanı zaten yok
         // + değer girdiğimizde sağa dogru, - değer girdiğimizde sola dogru kaydırıyor
+        //aksiyonDriver.dragAndDropBy(solSurgu, 100, 0).build().perform();
 
         BekleVeKapat();
 
