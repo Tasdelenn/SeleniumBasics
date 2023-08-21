@@ -25,6 +25,10 @@ public class _01_DragAndDropBy extends BaseDriver {
         // + değer girdiğimizde sağa dogru, - değer girdiğimizde sola dogru kaydırıyor
 
         BekleVeKapat();
+
+
+        // TODO : Sol sürgü 200$, sağ sürgü 400$ a getiriniz.
+        // int genislik=solSurgu.getSize().width;
     }
 
     @Test
