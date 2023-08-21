@@ -17,7 +17,7 @@ public class _03_ActionMouseWheel extends BaseDriver {
         WebElement iframe= driver.findElement(By.name("nested_scrolling_frame"));
 
         MyFunc.Bekle(3);
-        // iframe kadar scroll ypa
+        // iframe kadar scroll yap
         new Actions(driver).
                 scrollToElement(iframe).
                 build().
@@ -36,6 +36,20 @@ public class _03_ActionMouseWheel extends BaseDriver {
                 scrollByAmount(0,500).
                 build().
                 perform();
+
+        BekleVeKapat();
+    }
+
+    @Test
+    public void Action_mw_ts3(){
+        // belli bir elemente kadar adım adım scroll
+        driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
+        MyFunc.Bekle(3);
+
+        WebElement iframe= driver.findElement(By.name("nested_scrolling_frame"));
+        // TODO : iframe kadar 100px 100px şeklinde adım adım 1 sn aralıklarla scroll işlemi yapınız.
+        // ipucu elementin sayfanın başından nekadar aşağıda olduğu bilgisini
+        // element.getRect().y      şeklind ealabilirsiniz.
 
         BekleVeKapat();
     }
