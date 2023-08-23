@@ -15,6 +15,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -25,9 +26,9 @@ public class _06_Soru extends BaseDriver {
     public void Test1() {
         driver.get("https://www.google.com/");
 
-        List<WebElement> cookiesAccept= driver.findElements(By.xpath("//button[@id='L2AGLb']"));
-        if (cookiesAccept.size() > 0) //
-            cookiesAccept.get(0).click();
+      //  List<WebElement> cookiesAccept= driver.findElements(By.xpath("//button[@id='L2AGLb']"));
+      //  if (cookiesAccept.size() > 0) //
+      //      cookiesAccept.get(0).click();
 
         MyFunc.Bekle(2);
 
@@ -36,6 +37,10 @@ public class _06_Soru extends BaseDriver {
 
 //        WebElement srcBtn=driver.findElement(By.name("btnK"));
 //        srcBtn.click();  // Bu 2 satır yerine yukarıda ENTER tuşu gönderildi.
+
+        //// TODO:  selenium yazısını göndermeyi ve ENTER a basmasını Actions la yapınız,
+        //Actions acts = new Actions(driver);
+        //acts.sendKeys(Keys.ENTER).build().perform();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a/h3)[1]")));
         WebElement link1=driver.findElement(By.xpath("(//a/h3)[1]"));
@@ -46,6 +51,5 @@ public class _06_Soru extends BaseDriver {
 
         BekleVeKapat();
 
-        // TODO:  selenium yazısını göndermeyi ve ENTER a basmasını Actions la yapınıw,
     }
 }
