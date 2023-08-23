@@ -1,0 +1,31 @@
+1- Elementin HTML de olmaması durumu
+2- Elementin HTML de var fakat görünür değil durumu
+3- Element HTML de var , görünür fakat tıklanabilir değil
+
+Thread.Sleep -> bu selenium a özel değil,
+                java ya ait yazılımın herhangi bir yerinde verilen süre kadar bekler.
+
+Selenium un bekletme komutları :
+
+1- pageLoadTimeout : (sayfaya özel)
+
+driver.manage().timeouts().pageLoadTimeout( Duration.ofSeconds(20) );
+20 sn içerisinde sayfa yüklenmezse , hata ver, bildir.
+bu kullanılmazsa sayfayı sonsuza kadar yüklemeye çalışır.
+işlem gerçekleştiğinde kalan süreyi kullanmaz
+
+2- ImplicitlyWait (Genel WebElement ler için)
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20))  :
+Web Elementlerin findElement/s ile bulunmaya çalışıldığında verilen mühlet.
+Tüm elementler için geçerlidir, bir kez yazılır.
+Locator ı DOM da bulmaya çalışma süresi.
+işlem gerçekleştiğinde kalan süreyi kullanmaz
+
+3- ExplicitWait (Özel WebElement)
+
+WebElementin verilen kritere uygun hale gelene kadar verilen mühlet.
+tıklanabilir olana kadar bekle
+DOM da olana kadar bekle
+Görünür olana kadar bekle.
+Bu bekleme elemente özel.

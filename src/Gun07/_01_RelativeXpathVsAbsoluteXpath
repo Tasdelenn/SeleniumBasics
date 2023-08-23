@@ -1,0 +1,53 @@
+interviewlarda kaç çeşit xpath vardır şeklinde soru gelebilir.
+
+           Absolute Xpath
+           /html/body/div[2]/div/div/div/form/input
+           1- / başlıyor.
+           2- En baştan HTML den başlyarak bir yol bulur.Araya başka eleman girdiğinde yol kaybolur.
+           Bu yüzden kullanışsızdır.
+
+           Relative Xpath
+           //*[@id='login-button']
+            1- // başlıyor.
+            2- Elemanı direk bulur, baştan itibaren diğer elemanlara bağlı kalmaz.
+
+Xpath in avantajları :
+1- Herhangi bir elemanı görünen text inden bulabilir.
+2- HTML içinde geri geri gidebilir.
+3- xpath ile bulunmuş eleman sayfada çok ise, 1.cisi,
+   2.cisi veya 3. cüsü gibi sırasını vererek alabiliriz.
+
+CSS                           XPATH
+[id='msg']                    //input[@id='msg']    , input bölümü şart istenirse * konabilir.
+[id='msg'][value='Good']      //input[@id='msg' and @value='Good']
+
+
+ile başlayan id^              //input[ starts-with(@id,'u_') ]
+ile biten    id$              //input[ ends-with(@id,'_455') ]
+içinde geçen id*              //input[ contains(@id,'u_') ]
+
+CSS Alt elemanlardan           XPath
+>       -> cocuklar            /
+space   -> tüm çocuklar        //
++       -> bitik kardeş        following-sibling::
+~       -> tüm kardeşler       following::
+
+CSS nth-child                  XPath
+[id='list']>:nth-child(3)      //ul[@id='list']/li[3]
+
+XPath in CSS den üstünlükleri
+1- Görünen yazısından eleman bulma->      //*[text()='Siparişler']   görünen yazısı bu olan
+                                          //*[ contains( text(), 'Sipa' )  ]  görünen yazsısında geçen
+2- Geri Geri gitme ->                     /..         -> parenti bulur
+3- Çoklu elemanlardan seçme               (//*[@id='user-message'])[2]
+
+
+
+
+
+
+
+
+
+
+

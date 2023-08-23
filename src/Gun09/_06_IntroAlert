@@ -1,0 +1,15 @@
+İnterview sorusu
+- Alertleri nasıl kontorl edersin, nasıl handle edersin.
+
+driver.switchTo().alert() -> alerte geç
+
+komutları:
+1- accept  : OK, TAMAM botununa basmamızı sağlıyor
+2- dismiss : CANCEL, HAYIR, ynai olumsuz cevap vermiş oluruz.
+3- sendKeys: yazı gönderme
+4- getText : alertin yazısını alma.
+
+ driver.switchTo().alert().accept()
+ driver.switchTo().alert().dismiss()
+ driver.switchTo().alert().sendKeys()
+ driver.switchTo().alert().getText();
